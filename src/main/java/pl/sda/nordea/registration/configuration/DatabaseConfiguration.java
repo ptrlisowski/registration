@@ -18,12 +18,13 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import pl.sda.nordea.registration.security.SpringSecurityConfiguration;
+
+import pl.sda.nordea.registration.security.WebSecurityConfig;
 
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories(basePackages = "pl.sda.nordea.registration")
-@Import({ SpringSecurityConfiguration.class })
+@Import({ WebSecurityConfig.class })
 public class DatabaseConfiguration {
 
 	@Bean

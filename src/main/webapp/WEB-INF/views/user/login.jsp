@@ -1,6 +1,6 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8" --%>
-<%-- 	pageEncoding="UTF-8" isELIgnored="false"%> --%>
-<%-- <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%> --%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8" isELIgnored="false"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%-- <c:import url="../header.jsp" /> --%>
 
 <%-- <c:choose> --%>
@@ -20,11 +20,10 @@
 <%-- </c:choose> --%>
 <%-- <c:import url="../footer.jsp" /> --%>
 
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@page session="true"%>
+
 <html>
 <head>
-<title>Login Page</title>
+<title>Logowanie</title>
 <style>
 .error {
 	padding: 15px;
@@ -67,20 +66,21 @@
 			<p>Invalid username / password</p>
 		</c:if>
 	
-		<form action='<c:url value="/user/login" />' method="POST">
+		<form action='<c:url value="/user/login" />' method="post">
 			<p>
-				<label for="username">User:</label>
+				<label for="username">PESEL:</label>
 			</p>
-			<input type="text" id="username" name="username" />
+			<input type="number" name="username" />
 
 			<p>
-				<label for="password">Password:</label>
+				<label for="password">Hasło:</label>
 			</p>
-			<input type="password" id="password" name="password">
+			<input type="password" name="password">
 
 			<div>
-				<input name="submit" type="submit" />
+				<input type="submit" value="Zaloguj"/>
 			</div>
+			<input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/> 
 		</form>
 	</div>
 

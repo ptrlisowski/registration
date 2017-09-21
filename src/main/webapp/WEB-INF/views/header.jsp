@@ -13,7 +13,7 @@
 <ul>
 <li><a href='<c:url value="/"></c:url>'>Strona główna</a></li>
 <li><a href='<c:url value="/user/"></c:url>'>Użytkownik</a></li>
-<li><a href='<c:url value="/visit"></c:url>'>Zarezerwuj wizytę</a></li>
+<li><a href='<c:url value="/visit/"></c:url>'>Zarezerwuj wizytę</a></li>
 
 </ul>
 </nav>

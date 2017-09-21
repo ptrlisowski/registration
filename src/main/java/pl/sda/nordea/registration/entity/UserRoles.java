@@ -9,10 +9,8 @@ import javax.persistence.Id;
 public class UserRoles {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long userRoleId;
 	private String username;
-	
+	private String role = "ROLE_USER";
 	
 	
 	public UserRoles(String username) {
@@ -20,7 +18,7 @@ public class UserRoles {
 		this.username = username;
 	}
 
-	private String role = "ROLE_USER";
+	
 
 public UserRoles(){};
 
